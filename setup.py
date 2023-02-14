@@ -98,13 +98,13 @@ if TORCH_MAJOR == 0 and TORCH_MINOR < 4:
 cmdclass = {}
 ext_modules = []
 
-extras = {}
+#extras = {}
 
-if "--cpp_ext" in sys.argv or "--cuda_ext" in sys.argv:
-    if TORCH_MAJOR == 0:
-        raise RuntimeError(
-            "--cpp_ext requires Pytorch 1.0 or later, " "found torch.__version__ = {}".format(torch.__version__)
-        )
+#if "--cpp_ext" in sys.argv or "--cuda_ext" in sys.argv:
+  #  if TORCH_MAJOR == 0:
+    #    raise RuntimeError(
+     #       "--cpp_ext requires Pytorch 1.0 or later, " "found torch.__version__ = {}".format(torch.__version__)
+    #    )
 
 if "--cpp_ext" in sys.argv:
     sys.argv.remove("--cpp_ext")
